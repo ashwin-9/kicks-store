@@ -22,7 +22,7 @@ app.use(
     helmet({
       contentSecurityPolicy: false,
     })
-); // security middleware to help protext the app by setting various headers
+); // security middleware to help protect the app by setting various headers
 app.use(morgan('dev')); // middleware to log all the requests made to the server
 
 // Apply arcjet rate-limit middleware
