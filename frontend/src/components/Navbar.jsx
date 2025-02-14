@@ -1,19 +1,13 @@
 import { Link, useResolvedPath } from 'react-router-dom';
 import { ShoppingBagIcon, ShoppingCartIcon } from 'lucide-react';
 import ThemeSelector from './ThemeSelector';
-import { useEffect } from 'react';
 import { useProductStore } from '../store/useProductStore';
 
 const Navbar = () => {
   const {pathname} = useResolvedPath();
   const isHomePage = pathname === '/';
 
-  const { products, fetchProducts } = useProductStore();
-  
-  useEffect(() => {
-    fetchProducts();
-  }, [fetchProducts])
-
+  const { products } = useProductStore();
   const productCount = products.length;
 
   return (
