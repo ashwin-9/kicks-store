@@ -15,7 +15,6 @@ A modern web application for sneaker enthusiasts, built using the PERN (PostgreS
 - [Deployment](#deployment)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - Full-stack JavaScript application with modern architecture
@@ -95,9 +94,9 @@ The application will be available at `http://localhost:3000`
 │   │   ├── constants/    # Theme Constants
 │   │   ├── pages/        # Page components
 │   │   ├── store/        # Global state management with Zustand
-│   │   └── App.jsx      # Main application component
-│   │   └── index.css    # Global styles
-│   │   └── main.jsx     # Application entry point
+│   │   └── App.jsx       # Main application component
+│   │   └── index.css     # Global styles
+│   │   └── main.jsx      # Application entry point
 │   └── package.json      # Frontend dependencies
 │
 └── package.json          # Backend dependencies
@@ -169,6 +168,3 @@ The application is deployed on Render. Follow these steps to deploy:
 3. Commit your changes (`git commit -am 'Add new feature'`)
 4. Push to the branch (`git push origin feature/improvement`)
 5. Create a Pull Request
-
-## License
-This project is licensed under the MIT License.
