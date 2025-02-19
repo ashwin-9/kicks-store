@@ -65,3 +65,5 @@ export const THEMES = [
       colors: ["#282A36", "#BD93F9", "#FF79C6"],
     },
   ];
+
+  export const PAGE_SIZE = 6;

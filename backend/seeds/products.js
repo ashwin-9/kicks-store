@@ -11,7 +11,7 @@ const SAMPLE_PRODUCTS = [
     name: "Adidas Sneakers",
     price: 14990.00,
     image:
-        "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8??w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?w=800&auto=format&fit=crop&q=60",
   },
   {
     name: "Adidas Grey Running Shoes",
@@ -47,8 +47,20 @@ const SAMPLE_PRODUCTS = [
     name: "New Balance Sneakers",
     price: 14449.99,
     image:
-      "https://images.unsplash.com/photo-1539185441755-769473a23570??w=800&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&auto=format&fit=crop&q=60",
   },
+  {
+    name: "Nike Orange Athletic Shoes",
+    price: 10599.99,
+    image:
+      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&auto=format&fit=crop&q=60"
+  },
+  {
+    name: "Puma Orange and Black Sneakers",
+    price: 13499.00,
+    image:
+      "https://images.unsplash.com/photo-1715702725769-088a06b5c7a1?w=800&auto=format&fit=crop&q=60"
+  }
 ];
 
 async function seedDatabase() {

@@ -1,18 +1,26 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { PackageIcon, PlusCircleIcon, RefreshCwIcon } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import AddProductModal from '../components/AddProductModal';
+import Pagination from '../components/Pagination';
+import { PAGE_SIZE } from '../constants';
 
 const HomePage = () => {
   const {products, loading, error, fetchProducts} = useProductStore();
-
+  const [currentPage, setCurrentPage] = useState(0);
+  
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts])
+
+  const totalProducts = products.length;
+  const numPages = Math.ceil(totalProducts / PAGE_SIZE);
+  const start = currentPage * PAGE_SIZE;
+  const end = start + PAGE_SIZE;
   
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8">
+    <main className="min-h-screen flex flex-col justify-between max-w-6xl mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-8">
         <button className="btn btn-primary" onClick={() => document.getElementById('add_product_modal').showModal()}>
           <PlusCircleIcon className="size-5 mr-2" />
@@ -47,10 +55,14 @@ const HomePage = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map(product => (
+          {products.slice(start, end).map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
+      )}
+
+      {products.length !== 0 && (
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} numPages={numPages}/>
       )}
     </main>
   )

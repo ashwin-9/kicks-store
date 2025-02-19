@@ -24,7 +24,7 @@ A modern web application for sneaker enthusiasts, built using the PERN (PostgreS
 - Real-time notifications using React Hot Toast
 - Global state management with Zustand
 - PostgreSQL database integration for reliable data storage
-- Mobile-first design approach
+- Frontend Pagination
 
 ## Prerequisites
 - Node.js (v14.0.0 or higher)
