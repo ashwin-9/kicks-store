@@ -1,4 +1,4 @@
-# Kicks Store - PERN Stack E-commerce Application
+# Kicks Store - PERN Stack Inventory Store
 
 ## Description
 A modern web application for sneaker enthusiasts, built using the PERN (PostgreSQL, Express, React, Node.js) stack. Browse to keep track of the sneakers in the inventory!
